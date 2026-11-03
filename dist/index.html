@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="班级学生积分管理：导入名单、自定义规则、批量加减分与积分明细。">
+  <meta name="theme-color" content="#2859a5">
+  <title>学生积分管理系统 · 班级成长档案</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/xlsx.full.min.js"></script>
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="app-header"><div class="container header-inner">
+    <div class="brand"><span class="brand-mark" id="brand-icon"></span><div class="brand-text"><h1>学生积分管理系统</h1><small>CLASSROOM · GROWTH TOGETHER</small></div></div>
+    <div class="header-actions"><span class="save-status" id="save-status" role="status">本地自动保存</span><button class="btn btn-secondary btn-sm" data-action="backup">备份数据</button><button class="btn btn-ghost btn-sm" data-action="restore">恢复备份</button></div>
+  </div></header>
+  <main class="container">
+    <section class="hero"><div class="hero-content"><div class="hero-copy"><span class="eyebrow">班级成长档案</span><h2>每一份努力，都值得被记录。</h2><p>从日常点滴出发，让班级成长清晰可见。</p><div class="hero-tags"><span>自定义积分规则</span><span>支持批量录入</span><span>数据本地保存</span></div></div><div class="hero-side"><span>默认初始积分</span><div><strong>60</strong><small>分 / 人</small></div><p>导入时可为每位学生单独设置</p></div></div></section>
+    <section class="stats-grid" id="stats" aria-label="班级数据概览"></section>
+    <section class="workspace"><nav class="tabs" aria-label="功能导航" id="tabs"></nav><div id="view"></div></section>
+    <footer class="app-footer"><span>记录点滴进步 · 见证每一次成长</span><span>数据保存在当前浏览器，请定期备份</span></footer>
+  </main>
+  <div id="modal-root"></div><div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+  <input type="file" id="restore-input" accept=".json,application/json" hidden>
+</body>
+</html>

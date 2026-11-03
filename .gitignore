@@ -1,0 +1,59 @@
+# Local configuration, credentials and runtime state
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.credentials.json
+credentials*.json
+secrets*.json
+.openai/
+.codex/
+.cache/
+runtime/
+.local/
+node_modules/
+*.log
+*.pid
+
+# Student data, imports, exports and backups must stay off GitHub.
+backups/
+imports/
+exports/
+data/
+*备份*.json
+*备份*.txt
+*原始数据*.txt
+*backup*.json
+*Backup*.json
+*.csv
+*.tsv
+*.xls
+*.xlsx
+
+# Generated standalone edition and preview/test artifacts.
+/学生积分管理系统.html
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+screenshots/
+playwright-report/
+test-results/
+coverage/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Website assets and third-party license are source, not generated output.
+!dist/
+!dist/vendor/
+!dist/vendor/LICENSE-sheetjs.txt
